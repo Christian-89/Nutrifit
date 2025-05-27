@@ -10,6 +10,7 @@ Formulario para capturar datos físicos y objetivos.
 Visualización de una tabla de dietas para el usuario
 
 Conexión a base de datos MySQL para guardar y consultar información del usuario.
+
 La conexión a la BDD es unicamente de forma local, no tiene un hosting para funcionar desde internet.
 
 🧰 Tecnologías utilizadas:
