@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfiles con WhatsApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000; /* Fondo negro */
+            padding: 10px; /* Añadir un poco de espacio alrededor */
+            box-sizing: border-box; /* Asegurar que el padding no afecte al tamaño total */
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los perfiles se acomoden en múltiples filas en pantallas pequeñas */
+            justify-content: center; /* Centra los perfiles */
+            width: 100%; /* Usar el 100% del ancho */
+            max-width: 800px; /* Ancho máximo para mantener el diseño en pantallas grandes */
+        }
+        .profile {
+            position: relative;
+            text-align: center;
+            margin: 10px; /* Espaciado entre perfiles */
+        }
+        .profile img {
+            width: 100px; /* Ajustar el tamaño para dispositivos móviles */
+            height: 100px; /* Ajustar el tamaño para dispositivos móviles */
+            object-fit: cover; /* Asegura que la imagen se mantenga dentro del círculo */
+            border-radius: 50%; /* Hace la imagen circular */
+            border: 2px solid #fff; /* Borde blanco para resaltar en el fondo negro */
+        }
+        .whatsapp-link {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            background-color: transparent;
+        }
+        .whatsapp-link img {
+            width: 30px; /* Ajustar tamaño del icono de WhatsApp */
+            height: 30px; /* Ajustar tamaño del icono de WhatsApp */
+        }
+        .profile:hover .whatsapp-link {
+            display: block;
+        }
+        .profile-name {
+            color: white;
+            margin-top: 10px;
+        }
+        .profile-description {
+            color: white; /* Color del texto de descripción */
+            margin-top: 5px; /* Espacio entre el nombre y la descripción */
+            font-size: 14px; /* Tamaño de fuente de la descripción */
+        }
+
+
+
+        /*Configuración el botón menu*/
+        .botonM {
+            width: 50px; /* Ancho más grande para los botones */
+            height: 50px; /* Altura más grande para los botones */
+            border: none;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* Posicionamiento relativo dentro de su contenedor */
+        }
+
+        .botonM img {
+            width: 50px; /* Aumenta el tamaño de la imagen dentro del botón */
+            height: 50px;
+        }
+
+        .boton-menu {
+            display: flex;
+            justify-content: space-evenly; /* Mueve los botones más hacia el centro */
+            align-items: flex-end;
+            position: absolute;
+            bottom: 650px; /* Aumenta este valor para subir el boton*/
+            left: 10%; /*Disminuye para hacer mas a la izquierda*/
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 360px; /* Límite del contenedor */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile">
+            <img src="n1.jpg" alt="Miriam">
+            <a href="https://wa.me/2711785919" class="whatsapp-link" target="_blank">
+                <img src="w.png" alt="WhatsApp">
+            </a>
+            <div class="profile-name">Miriam</div>
+            <div class="profile-description">Dirección <br> Edificio Gamma C.2 Nte. 113-
+                interior 9, Centro, 94100 Huatusco
+                de Chicuellar, Ver.</div> <!-- Descripción de Miriam -->
+        </div>
+        <div class="profile">
+            <img src="n2.png" alt="Maria Fernanda">
+            <a href="https://wa.me/2731279191" class="whatsapp-link" target="_blank">
+                <img src="w.png" alt="WhatsApp">
+            </a>
+            <div class="profile-name">Maria Fernanda</div>
+            <div class="profile-description">Dirección <br> Edificio Gamma C.2 Nte. 113-
+                interior 9, Centro, 94100 Huatusco
+                de Chicuellar, Ver.</div> <!-- Descripción de Fernanda -->
+        </div>
+        <div class="profile">
+            <img src="n3.jpg" alt="Brenda">
+            <a href="https://wa.me/2731168418" class="whatsapp-link" target="_blank">
+                <img src="w.png" alt="WhatsApp">
+            </a>
+            <div class="profile-name">Brenda</div>
+            <div class="profile-description">Dirección <br> Edificio Gamma C.2 Nte. 113-
+                interior 9, Centro, 94100 Huatusco
+                de Chicuellar, Ver.</div> <!-- Descripción de Brenda -->
+        </div>
+    </div>
+
+    <div class="boton-menu">
+        <button class="botonM" id="menu">
+            <img src="Iconos/menuB.png" alt="Icono 1">
+        </button>
+    </div>
+
+    <script>
+        // Redirigir al menu de Inicio
+        document.getElementById('menu').addEventListener('click', function() {
+            window.location.href = 'inicio1.html';
+             });
+    </script>
+</body>
+</html>
